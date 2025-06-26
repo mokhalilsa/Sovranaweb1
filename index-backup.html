@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovrana - Multi-Agent AI Workflow Automation</title>
+    <meta name="description" content="Create scalable access to sophisticated multi-agent AI systems through our intuitive platform. Transform your business with custom AI workflows.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'sovrana-blue': '#1e40af',
+                        'sovrana-dark': '#0f172a',
+                        'sovrana-light': '#f8fafc',
+                        'sovrana-accent': '#3b82f6',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center" style="padding: 20px 40px;">
+                <div class="flex items-center">
+                    <img src="images/Color logo - no background.png" alt="Sovrana Logo" class="h-12 w-auto">
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#advantages" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Advantages</a>
+                        <a href="#services" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Services</a>
+                        <a href="#markets" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Markets</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Case Studies</a>
+                        <a href="#contact" class="bg-sovrana-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium">Get Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-sovrana-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-4 pb-6 space-y-4">
+                <a href="#advantages" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Advantages</a>
+                <a href="#services" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Services</a>
+                <a href="#markets" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Markets</a>
+                <a href="#testimonials" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Case Studies</a>
+                <a href="#contact" class="block bg-sovrana-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium text-center">Get Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden tech-hero">
+        <!-- Professional Tech Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-sovrana-dark to-blue-800"></div>
+        <div class="absolute inset-0" style="background-image: url('images/blue-corporate.jpg'); background-size: cover; background-position: center; animation: circuitGlow 8s ease-in-out infinite;"></div>
+        
+        <!-- Enhanced Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
+        
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-float"></div>
+            <div class="absolute top-1/3 right-1/4 w-1 h-1 bg-blue-400 rounded-full opacity-80 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-cyan-300 rounded-full opacity-50 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute top-2/3 right-1/3 w-1 h-1 bg-blue-300 rounded-full opacity-70 animate-float" style="animation-delay: 3s;"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 hero-content">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+                    Scalable 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">AI Workflows</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-lg">
+                    Transform your business with sophisticated multi-agent AI systems through our intuitive platform. 
+                    Built for startups and SMBs ready to scale with AI automation.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        Request Demo
+                    </a>
+                    <a href="#advantages" class="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-sovrana-dark px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
+                        Learn More
+                    </a>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-3xl font-bold text-cyan-400">$50K-$100K</div>
+                        <div class="text-gray-200 font-medium">Project Investment</div>
+                    </div>
+                    <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-3xl font-bold text-cyan-400">10-250</div>
+                        <div class="text-gray-200 font-medium">Employees Served</div>
+                    </div>
+                    <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-3xl font-bold text-cyan-400">24/7</div>
+                        <div class="text-gray-200 font-medium">AI Operations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#advantages" class="text-cyan-400 text-2xl hover:text-white transition-colors duration-300">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Key Advantages Section -->
+    <section id="advantages" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    9 Key Advantages
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover why leading startups and SMBs choose Sovrana for their AI automation needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Custom-Built Multi-Agent Workflows</h3>
+                    <p class="text-gray-600">Tailored AI solutions designed specifically for your business processes and industry requirements.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">AI-Native Architecture</h3>
+                    <p class="text-gray-600">Built from the ground up with AI at its core, ensuring optimal performance and scalability.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">End-to-End Automation</h3>
+                    <p class="text-gray-600">Complete workflow automation from initiation to completion, reducing manual intervention.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Integration-First Design</h3>
+                    <p class="text-gray-600">Seamlessly connect with your existing tools and systems for unified operations.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chess-king text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Executive & Strategic Workflow Automation</h3>
+                    <p class="text-gray-600">Empower leadership with intelligent automation for strategic decision-making processes.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-industry text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Cross-Industry Capability</h3>
+                    <p class="text-gray-600">Versatile platform that adapts to various industries from FinTech to Healthcare.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Accelerated Deployment</h3>
+                    <p class="text-gray-600">Rapid implementation and deployment to get your AI workflows running quickly.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Human-Centric UX</h3>
+                    <p class="text-gray-600">Intuitive interfaces designed for humans to work seamlessly with AI systems.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Backend AI Development Partnership</h3>
+                    <p class="text-gray-600">Ongoing partnership with our AI experts for continuous optimization and enhancement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    6 Core Value Propositions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Measurable business impact that transforms how your organization operates and competes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-clock text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Strategic Time Reallocation</h3>
+                    <p class="text-gray-600 leading-relaxed">Free up valuable time for strategic initiatives by automating routine tasks and processes.</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-tachometer-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Increased Speed & Accuracy</h3>
+                    <p class="text-gray-600 leading-relaxed">Achieve faster processing times with higher accuracy rates through intelligent automation.</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Data-Driven Decisions</h3>
+                    <p class="text-gray-600 leading-relaxed">Make informed decisions with real-time insights and comprehensive data analysis.</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-piggy-bank text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Cost Efficiency</h3>
+                    <p class="text-gray-600 leading-relaxed">Reduce operational costs while improving output quality and business performance.</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Future-Proof Infrastructure</h3>
+                    <p class="text-gray-600 leading-relaxed">Build scalable systems that evolve with your business and adapt to future needs.</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-24 h-24 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-trophy text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Competitive Differentiation</h3>
+                    <p class="text-gray-600 leading-relaxed">Gain competitive advantage through innovative AI workflows that set you apart.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services" class="py-20 bg-sovrana-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Core Services
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Three powerful components that work together to transform your business operations.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Custom Built Multi-Agentic Workflows</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Create sophisticated AI agents without complex coding. Our intuitive builder empowers your team to design, configure, and deploy custom workflows tailored to your specific business needs.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Drag-and-drop interface</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Pre-built templates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Custom built Multi Agentic Workflows by our expert teams - i.e AI Software engineers</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-network-wired text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Intelligent Orchestration Engine</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Seamlessly coordinate multiple AI agents and workflows. Our orchestration engine ensures optimal performance, resource allocation, and seamless communication between different automated processes.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-pink-400 mr-3"></i>Multi-agent coordination</li>
+                        <li class="flex items-center"><i class="fas fa-check text-pink-400 mr-3"></i>Resource optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-pink-400 mr-3"></i>Real-time monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Comprehensive Agent Dashboard</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Monitor, analyze, and optimize your AI workflows with our comprehensive dashboard. Get real-time insights, performance metrics, and actionable analytics to continuously improve your operations.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Real-time analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Performance tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Custom reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="bg-sovrana-accent hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Explore Our Platform
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Markets Section -->
+    <section id="markets" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Target Markets
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Serving technologically-driven companies ready to embrace AI automation for competitive advantage.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-rocket text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-sovrana-dark">Technologically-driven Startups</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Perfect for innovative startups looking to scale efficiently with AI automation. We serve companies in high-growth sectors that need sophisticated workflows without the complexity.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-laptop-code text-sovrana-blue text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">SaaS</div>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <i class="fas fa-dollar-sign text-green-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">FinTech</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <i class="fas fa-users text-purple-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">HRTech</div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <i class="fas fa-graduation-cap text-orange-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">EdTech</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-sovrana-dark">Small to Medium Businesses</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Ideal for established SMBs (10-250 employees) seeking to modernize operations and compete with larger enterprises through intelligent automation.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <i class="fas fa-shopping-cart text-red-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">Retail</div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-briefcase text-sovrana-blue text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">Professional Services</div>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <i class="fas fa-industry text-yellow-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">Manufacturing</div>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <i class="fas fa-heartbeat text-green-600 text-xl mb-2"></i>
+                            <div class="font-semibold text-sovrana-dark">Healthcare</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-sovrana-blue to-cyan-600 p-8 rounded-2xl text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Perfect Fit for Your Business?</h3>
+                <p class="text-xl mb-6 text-blue-100">
+                    Companies with 10-250 employees investing $50K-$100K in AI transformation projects
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-white text-sovrana-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+                        Schedule Consultation
+                    </a>
+                    <a href="#testimonials" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-sovrana-blue transition-all duration-300">
+                        View Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Success Stories
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how companies are transforming their operations with Sovrana's AI automation platform.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <img src="images/team-collaboration.jpg" alt="FinTech Team" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold text-sovrana-dark">TechFlow Solutions</div>
+                            <div class="text-gray-600">FinTech Startup</div>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 text-lg leading-relaxed mb-6">
+                        "Sovrana's multi-agent platform reduced our customer onboarding time by 75% while improving accuracy. The no-code builder allowed our team to create complex workflows without hiring additional developers."
+                    </blockquote>
+                    <div class="border-t border-blue-200 pt-4">
+                        <div class="text-sm text-gray-600">Key Results:</div>
+                        <div class="flex flex-wrap gap-4 mt-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">75% Faster Onboarding</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">40% Cost Reduction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <img src="images/startup-workspace.jpg" alt="E-commerce Team" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold text-sovrana-dark">RetailMax Pro</div>
+                            <div class="text-gray-600">E-commerce Platform</div>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 text-lg leading-relaxed mb-6">
+                        "The intelligent orchestration engine helped us automate our entire inventory management and customer service workflows. We're now processing 300% more orders with the same team size."
+                    </blockquote>
+                    <div class="border-t border-green-200 pt-4">
+                        <div class="text-sm text-gray-600">Key Results:</div>
+                        <div class="flex flex-wrap gap-4 mt-2">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">300% Order Volume</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">24/7 Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-sovrana-blue mb-2">95%</div>
+                    <div class="text-gray-600">Process Automation Rate</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-600 mb-2">60%</div>
+                    <div class="text-gray-600">Average Cost Savings</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">30 Days</div>
+                    <div class="text-gray-600">Average Deployment Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Demo Request Section -->
+    <section id="contact" class="py-20 bg-sovrana-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Ready to Transform Your Business?
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Join the growing number of companies leveraging AI automation for competitive advantage. 
+                        Schedule a personalized demo to see how Sovrana can transform your workflows.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sovrana-accent rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-calendar text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold">Free Consultation</div>
+                                <div class="text-gray-300">30-minute strategy session with our AI experts</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sovrana-accent rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-eye text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold">Live Demo</div>
+                                <div class="text-gray-300">See the platform in action with your use cases</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sovrana-accent rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-road text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold">Custom Roadmap</div>
+                                <div class="text-gray-300">Personalized implementation plan for your business</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-6">Request Your Demo</h3>
+                    
+                    <form id="demo-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Business Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Size</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                                <option>Select size...</option>
+                                <option>10-25 employees</option>
+                                <option>26-50 employees</option>
+                                <option>51-100 employees</option>
+                                <option>101-250 employees</option>
+                                <option>250+ employees</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Industry</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent">
+                                <option>Select industry...</option>
+                                <option>SaaS</option>
+                                <option>FinTech</option>
+                                <option>HRTech</option>
+                                <option>EdTech</option>
+                                <option>E-commerce</option>
+                                <option>Retail</option>
+                                <option>Professional Services</option>
+                                <option>Manufacturing</option>
+                                <option>Healthcare</option>
+                                <option>Logistics</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">How can Sovrana help your business?</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sovrana-blue focus:border-transparent" placeholder="Describe your automation needs and challenges..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-sovrana-blue hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300">
+                            Schedule Demo
+                        </button>
+                        
+                        <p class="text-sm text-gray-600 text-center">
+                            By submitting this form, you agree to our privacy policy and terms of service.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="images/Color logo - no background.png" alt="Sovrana Logo" class="h-12 w-auto mb-6">
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Democratizing access to sophisticated multi-agent AI systems through our intuitive platform. 
+                        Empowering startups and SMBs to compete with enterprise-level automation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Agent Builder</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Orchestration Engine</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Dashboard</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">API Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Sovrana. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+
+
+
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 26px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='22' viewBox='0 0 26 22' fill='none'%3E%3Cg clip-path='url(%23clip0_3442_102412)'%3E%3Cpath d='M12.8405 14.6775C12.8405 14.9897 13.0932 15.2424 13.4055 15.2424C13.7178 15.2424 13.9705 14.9897 13.9705 14.6775V2.98254C13.9705 1.88957 13.0809 1 11.9879 1C10.895 1 10.0054 1.88957 10.0054 2.98254V11.566V17.1068C10.0054 17.5773 9.62327 17.9594 9.1528 17.9594C8.68233 17.9594 8.30021 17.5773 8.30021 17.1068V8.04469C8.30021 6.95172 7.41063 6.06215 6.31767 6.06215C5.22471 6.06215 4.33513 6.95172 4.33513 8.04469V11.8855C4.33513 12.3559 3.953 12.7381 3.48254 12.7381C3.01207 12.7381 2.62994 12.3559 2.62994 11.8855V10.4936C2.62994 10.1813 2.37725 9.92861 2.06497 9.92861C1.7527 9.92861 1.5 10.1813 1.5 10.4936V11.8855C1.5 12.9784 2.38957 13.868 3.48254 13.868C4.5755 13.868 5.46508 12.9784 5.46508 11.8855V8.04469C5.46508 7.57422 5.8472 7.19209 6.31767 7.19209C6.78814 7.19209 7.17026 7.57422 7.17026 8.04469V17.1068C7.17026 18.1998 8.05984 19.0894 9.1528 19.0894C10.2458 19.0894 11.1353 18.1998 11.1353 17.1068V2.98254C11.1353 2.51207 11.5175 2.12994 11.9879 2.12994C12.4584 2.12994 12.8405 2.51207 12.8405 2.98254V14.6775Z' fill='%23F8F8F8'/%3E%3Cpath d='M23.3278 6.06215C22.2348 6.06215 21.3452 6.95172 21.3452 8.04469V15.6143C21.3452 16.0847 20.9631 16.4669 20.4926 16.4669C20.0222 16.4669 19.6401 16.0847 19.6401 15.6143V2.98254C19.6401 1.88957 18.7505 1 17.6575 1C16.5645 1 15.675 1.88957 15.675 2.98254V19.0175C15.675 19.4879 15.2928 19.8701 14.8224 19.8701C14.3519 19.8701 13.9698 19.4879 13.9698 19.0175V17.0329C13.9698 16.7206 13.7171 16.4679 13.4048 16.4679C13.0925 16.4679 12.8398 16.7206 12.8398 17.0329V19.0175C12.8398 20.1104 13.7294 21 14.8224 21C15.9153 21 16.8049 20.1104 16.8049 19.0175V2.98254C16.8049 2.51207 17.187 2.12994 17.6575 2.12994C18.128 2.12994 18.5101 2.51207 18.5101 2.98254V15.6143C18.5101 16.7072 19.3997 17.5968 20.4926 17.5968C21.5856 17.5968 22.4752 16.7072 22.4752 15.6143V8.04469C22.4752 7.57422 22.8573 7.19209 23.3278 7.19209C23.7982 7.19209 24.1804 7.57422 24.1804 8.04469V14.6775C24.1804 14.9897 24.4331 15.2424 24.7453 15.2424C25.0576 15.2424 25.3103 14.9897 25.3103 14.6775V8.04469C25.3103 6.95172 24.4207 6.06215 23.3278 6.06215Z' fill='%23F8F8F8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3442_102412'%3E%3Crect width='25' height='22' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+</body>
+</html>

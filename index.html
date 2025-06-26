@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovrana - Scalable AI Workflows</title>
+    <meta name="description" content="Custom AI agents for business automation, without the enterprise price tag. Transform your business with sophisticated multi-agent AI systems.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'sovrana-blue': '#1e40af',
+                        'sovrana-dark': '#0f172a',
+                        'sovrana-light': '#f8fafc',
+                        'sovrana-accent': '#3b82f6',
+                        'mountain-blue': '#87CEEB',
+                        'snow-white': '#F8F8FF'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center" style="padding: 20px 40px;">
+                <div class="flex items-center">
+                    <img src="images/sovrana-logo-updated.png" alt="Sovrana Logo" class="h-12 w-auto">
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#assessment" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Assessment</a>
+                        <a href="#demo" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">AI Demo</a>
+                        <a href="#advantages" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Advantages</a>
+                        <a href="#engineering" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Engineering</a>
+                        <a href="#pricing" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Pricing</a>
+                        <a href="#team" class="text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Team</a>
+                        <a href="#contact" class="bg-sovrana-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium">Get Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-sovrana-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-4 pb-6 space-y-4">
+                <a href="#assessment" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Assessment</a>
+                <a href="#demo" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">AI Demo</a>
+                <a href="#advantages" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Advantages</a>
+                <a href="#engineering" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Engineering</a>
+                <a href="#pricing" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Pricing</a>
+                <a href="#team" class="block text-gray-600 hover:text-sovrana-blue transition-colors duration-300 font-medium">Team</a>
+                <a href="#contact" class="block bg-sovrana-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium text-center">Get Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section with Sunset Skyline -->
+    <section class="relative h-screen xl:h-[120vh] flex items-center justify-center overflow-hidden">
+        <!-- Riyadh KAFD Skyline Background -->
+        <div class="absolute inset-0">
+            <img src="images/riyadh-kafd-skyline.jpg" alt="Riyadh KAFD Skyline" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-blue-500/10"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10" data-aos="fade-up">
+            <div class="bg-white/70 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-12 shadow-2xl border border-white/20 max-w-4xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl md:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-600">Scalable</span> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">AI Workflows</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+                    Custom AI agents for business automation, without the enterprise price tag.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6 sm:mb-8 md:mb-12">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                        Request Demo
+                    </a>
+                    <a href="#advantages" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+                    <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 md:p-6 shadow-lg">
+                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-sovrana-blue">Starting from $10K</div>
+                        <div class="text-sm sm:text-base text-gray-600 font-medium">Project Investment</div>
+                    </div>
+                    <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 md:p-6 shadow-lg">
+                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-sovrana-blue">Any Size</div>
+                        <div class="text-sm sm:text-base text-gray-600 font-medium">Business Served</div>
+                    </div>
+                    <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 md:p-6 shadow-lg">
+                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-sovrana-blue">24/7</div>
+                        <div class="text-sm sm:text-base text-gray-600 font-medium">AI Operations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#assessment" class="text-sovrana-blue text-2xl hover:text-sovrana-dark transition-colors duration-300">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- AI Readiness Assessment Tool -->
+    <section id="assessment" class="py-20 bg-gradient-to-br from-snow-white to-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    AI Readiness Assessment
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover your automation potential with our interactive assessment tool. Get instant insights into how AI can transform your workflows.
+                </p>
+            </div>
+            
+            <div id="assessment-tool" class="bg-white rounded-3xl shadow-2xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="200">
+                <div id="assessment-questions" class="space-y-8">
+                    <!-- Question 1 -->
+                    <div class="question-block" data-question="1">
+                        <h3 class="text-2xl font-semibold text-sovrana-dark mb-6">What's your current team size?</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="team-size" value="1-10" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark">1-10 employees</div>
+                                    <div class="text-gray-600">Small team or startup</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="team-size" value="11-50" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark">11-50 employees</div>
+                                    <div class="text-gray-600">Growing company</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="team-size" value="51-250" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark">51-250 employees</div>
+                                    <div class="text-gray-600">Mid-size business</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="team-size" value="250+" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark">250+ employees</div>
+                                    <div class="text-gray-600">Large enterprise</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-block hidden" data-question="2">
+                        <h3 class="text-2xl font-semibold text-sovrana-dark mb-6">How many repetitive tasks does your team handle daily?</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="repetitive-tasks" value="few" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300 text-center">
+                                    <div class="text-3xl mb-2">⚡</div>
+                                    <div class="text-lg font-medium text-sovrana-dark">Few</div>
+                                    <div class="text-gray-600">1-5 per day</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="repetitive-tasks" value="moderate" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300 text-center">
+                                    <div class="text-3xl mb-2">🔄</div>
+                                    <div class="text-lg font-medium text-sovrana-dark">Moderate</div>
+                                    <div class="text-gray-600">6-20 per day</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="repetitive-tasks" value="many" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300 text-center">
+                                    <div class="text-3xl mb-2">🚀</div>
+                                    <div class="text-lg font-medium text-sovrana-dark">Many</div>
+                                    <div class="text-gray-600">20+ per day</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-block hidden" data-question="3">
+                        <h3 class="text-2xl font-semibold text-sovrana-dark mb-6">What's your current tech stack integration level?</h3>
+                        <div class="space-y-4">
+                            <label class="cursor-pointer block">
+                                <input type="radio" name="tech-integration" value="basic" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark mb-2">Basic Tools</div>
+                                    <div class="text-gray-600">Email, spreadsheets, basic software</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer block">
+                                <input type="radio" name="tech-integration" value="intermediate" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark mb-2">Intermediate Integration</div>
+                                    <div class="text-gray-600">CRM, project management, some APIs</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer block">
+                                <input type="radio" name="tech-integration" value="advanced" class="sr-only peer">
+                                <div class="p-6 border-2 border-gray-200 rounded-xl peer-checked:border-sovrana-blue peer-checked:bg-blue-50 transition-all duration-300 hover:border-gray-300">
+                                    <div class="text-lg font-medium text-sovrana-dark mb-2">Advanced Integration</div>
+                                    <div class="text-gray-600">Multiple systems, APIs, automation tools</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="assessment-results" class="hidden text-center">
+                        <div class="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-xl p-8 mb-8">
+                            <div class="text-4xl font-bold mb-4" id="automation-score">85%</div>
+                            <div class="text-xl" id="automation-message">You're ready to automate a significant portion of your workflows!</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">💰</div>
+                                <div class="text-lg font-semibold text-sovrana-dark">Potential Savings</div>
+                                <div class="text-gray-600" id="potential-savings">$50,000/year</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">⏱️</div>
+                                <div class="text-lg font-semibold text-sovrana-dark">Time Saved</div>
+                                <div class="text-gray-600" id="time-saved">20 hours/week</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">🎯</div>
+                                <div class="text-lg font-semibold text-sovrana-dark">ROI Timeline</div>
+                                <div class="text-gray-600" id="roi-timeline">3-6 months</div>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='#contact'" class="bg-gradient-to-r from-sovrana-blue to-mountain-blue text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            Get Your Custom AI Plan
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between mt-8">
+                    <button id="prev-btn" class="hidden bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-300">
+                        <i class="fas fa-arrow-left mr-2"></i>Previous
+                    </button>
+                    <button id="next-btn" class="bg-sovrana-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 ml-auto">
+                        Next<i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded AI Agent Demo -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Experience Sovrana AI Live
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Interact with our AI agent to understand how custom automation can transform your business processes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Demo Interface -->
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-sovrana-dark to-blue-900 rounded-3xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-4 h-4 bg-red-500 rounded-full mr-2"></div>
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></div>
+                            <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                            <div class="text-white text-sm font-medium">Sovrana AI Agent Demo</div>
+                        </div>
+                        
+                        <div id="chat-container" class="bg-white rounded-xl p-4 h-96 overflow-y-auto mb-4">
+                            <div class="space-y-4" id="chat-messages">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-sovrana-blue rounded-full flex items-center justify-center">
+                                        <i class="fas fa-robot text-white text-sm"></i>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+                                        <p class="text-gray-800">Hello! I'm Sovrana's AI assistant. I can help you understand how our custom AI agents work. What would you like to know?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-2">
+                            <input 
+                                type="text" 
+                                id="chat-input" 
+                                placeholder="Ask about AI automation, pricing, or capabilities..."
+                                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sovrana-blue"
+                                onkeypress="handleChatKeyPress(event)"
+                            >
+                            <button 
+                                onclick="sendMessage()" 
+                                class="bg-sovrana-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Quick Questions -->
+                        <div class="mt-4 space-y-2">
+                            <div class="text-white text-sm font-medium">Quick questions:</div>
+                            <div class="flex flex-wrap gap-2">
+                                <button onclick="askQuestion('What can AI agents do for my business?')" class="bg-white/20 text-white px-3 py-1 rounded-full text-sm hover:bg-white/30 transition-colors duration-300">
+                                    Business benefits
+                                </button>
+                                <button onclick="askQuestion('How much does implementation cost?')" class="bg-white/20 text-white px-3 py-1 rounded-full text-sm hover:bg-white/30 transition-colors duration-300">
+                                    Pricing
+                                </button>
+                                <button onclick="askQuestion('How long does setup take?')" class="bg-white/20 text-white px-3 py-1 rounded-full text-sm hover:bg-white/30 transition-colors duration-300">
+                                    Implementation time
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Demo Features -->
+                <div data-aos="fade-left">
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-sovrana-blue rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-brain text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-sovrana-dark">Natural Language Processing</h3>
+                            </div>
+                            <p class="text-gray-600">Our AI understands context and intent, enabling human-like conversations about your business needs.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-network-wired text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-sovrana-dark">Multi-Agent Orchestration</h3>
+                            </div>
+                            <p class="text-gray-600">Multiple AI agents work together to handle complex workflows across different business functions.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-cogs text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-sovrana-dark">Custom Integration</h3>
+                            </div>
+                            <p class="text-gray-600">Seamlessly connects with your existing tools and systems for unified automation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Differentiation Section -->
+    <section id="comparison" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Why Choose Sovrana?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how our custom AI agents compare to traditional automation solutions.
+                </p>
+            </div>
+            
+            <div class="overflow-x-auto" data-aos="fade-up" data-aos-delay="200">
+                <table class="w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <thead class="bg-gradient-to-r from-sovrana-blue to-mountain-blue text-white">
+                        <tr>
+                            <th class="px-6 py-6 text-left text-lg font-semibold">Feature</th>
+                            <th class="px-6 py-6 text-center text-lg font-semibold">Sovrana</th>
+                            <th class="px-6 py-6 text-center text-lg font-semibold">Traditional RPA</th>
+                            <th class="px-6 py-6 text-center text-lg font-semibold">Zapier</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">Custom AI Agents</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">Multi-Agent Orchestration</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-minus-circle text-yellow-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">Natural Language Processing</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">Enterprise-Grade Security</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-minus-circle text-yellow-500 text-xl"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">SMB-Friendly Pricing</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-6 font-medium text-sovrana-dark">24/7 Support</td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-6 text-center">
+                                <i class="fas fa-minus-circle text-yellow-500 text-xl"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-lg text-gray-600 mb-6">
+                    Get enterprise-level AI automation without the enterprise price tag.
+                </p>
+                <a href="#pricing" class="bg-gradient-to-r from-sovrana-blue to-mountain-blue text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    View Pricing Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise-Grade Engineering Section -->
+    <section id="engineering" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Enterprise-Grade Engineering, Powered by Sovrana
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Sovrana pairs strategic AI with elite engineering execution.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Side -->
+                <div data-aos="fade-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <div class="mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-r from-sovrana-blue to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Through our trusted delivery partners we access <span class="font-bold text-sovrana-blue">750+ certified experts</span> across AI, Cloud, and Full-Stack Development, drawn from the top 1% and recognized by 25+ international awards.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Our delivery team is ISO 9001 and 27001 certified, ensuring enterprise-grade quality management and information security.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed font-medium">
+                                Together, we turn complex roadmaps into secure, scalable solutions.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Stats -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="text-center p-4 bg-blue-50 rounded-xl">
+                                <div class="text-2xl font-bold text-sovrana-blue">750+</div>
+                                <div class="text-sm text-gray-600">Certified Experts</div>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-xl">
+                                <div class="text-xl font-bold text-green-600">ISO 9001<br/>& 27001</div>
+                                <div class="text-sm text-gray-600">Certified</div>
+                            </div>
+                            <div class="text-center p-4 bg-orange-50 rounded-xl">
+                                <div class="text-2xl font-bold text-orange-600">25+</div>
+                                <div class="text-sm text-gray-600">Int'l Awards</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Side -->
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-sovrana-blue to-blue-700 p-8 rounded-2xl shadow-2xl">
+                            <h3 class="text-2xl font-bold text-white mb-6">Our Engineering Excellence</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center text-white">
+                                    <i class="fas fa-brain text-cyan-300 mr-4 text-xl"></i>
+                                    <span class="text-lg">AI & Machine Learning Experts</span>
+                                </div>
+                                <div class="flex items-center text-white">
+                                    <i class="fas fa-cloud text-blue-300 mr-4 text-xl"></i>
+                                    <span class="text-lg">Cloud Architecture Specialists</span>
+                                </div>
+                                <div class="flex items-center text-white">
+                                    <i class="fas fa-layer-group text-green-300 mr-4 text-xl"></i>
+                                    <span class="text-lg">Full-Stack Development</span>
+                                </div>
+                                <div class="flex items-center text-white">
+                                    <i class="fas fa-shield-alt text-yellow-300 mr-4 text-xl"></i>
+                                    <span class="text-lg">Security & Compliance</span>
+                                </div>
+                                <div class="flex items-center text-white">
+                                    <i class="fas fa-chart-line text-purple-300 mr-4 text-xl"></i>
+                                    <span class="text-lg">Scalable Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating badge -->
+                        <div class="absolute -top-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
+                            Top 1% Talent
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="bg-gradient-to-r from-sovrana-blue to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Discuss Your Engineering Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the plan that fits your automation needs. No hidden fees, no enterprise markups.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Starter Assessment -->
+                <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Starter Assessment</h3>
+                        <div class="text-5xl font-bold text-sovrana-blue mb-2">Free</div>
+                        <div class="text-gray-600">Consultation & Assessment</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">AI Readiness Assessment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Custom Automation Strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">ROI Projections</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Implementation Roadmap</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">1-Hour Consultation</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.location.href='#contact'" class="w-full bg-sovrana-blue text-white py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors duration-300">
+                        Start Free Assessment
+                    </button>
+                </div>
+                
+                <!-- Implementation Package -->
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-8 shadow-2xl transform scale-105 relative border-2 border-green-200" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-sovrana-dark px-6 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Implementation Package</h3>
+                        <div class="text-5xl font-bold text-sovrana-blue mb-2">$10K</div>
+                        <div class="text-gray-600">AI Automation Starter</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Everything in Free</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Basic Agent Implementation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Core Workflow Automation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Basic Integration Setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">1-Month Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Performance Monitoring</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.location.href='#contact'" class="w-full bg-sovrana-blue text-white py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors duration-300">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Custom Solution -->
+                <div class="bg-gradient-to-br from-sovrana-blue to-mountain-blue text-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Custom Solution</h3>
+                        <div class="text-5xl font-bold mb-2">$50K-$100K</div>
+                        <div class="text-blue-100">Complete AI Implementation</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Custom Multi-Agent System</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Full Integration Setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Team Training & Onboarding</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>3-Month Support Included</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Performance Monitoring</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Continuous Optimization</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.location.href='#contact'" class="w-full bg-white text-sovrana-blue py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300">
+                        Get Custom Quote
+                    </button>
+                </div>
+                
+                <!-- Enterprise -->
+                <div class="bg-gradient-to-br from-gray-50 to-purple-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="350">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Enterprise</h3>
+                        <div class="text-5xl font-bold text-sovrana-blue mb-2">Custom</div>
+                        <div class="text-gray-600">Large-Scale Deployment</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Multi-Department Integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Advanced Security Features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Dedicated Account Manager</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">24/7 Priority Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Custom SLA Agreement</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.location.href='#contact'" class="w-full bg-sovrana-blue text-white py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors duration-300">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-sovrana-dark mb-4">Money-Back Guarantee</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        If you don't see measurable ROI within 6 months, we'll refund your investment.
+                    </p>
+                    <div class="flex justify-center space-x-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-sovrana-blue">3-6x</div>
+                            <div class="text-gray-600">Average ROI</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-sovrana-blue">30%</div>
+                            <div class="text-gray-600">Time Savings</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-sovrana-blue">90%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Human Connection / Team Section -->
+    <section id="team" class="py-20 bg-gradient-to-br from-sovrana-dark to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Meet the Team Building the Future of Work
+                </h2>
+                <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                    Our experienced team combines deep AI expertise with real-world business understanding to deliver solutions that actually work.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Founder 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Mohammed Khalil</h3>
+                    <p class="text-cyan-400 mb-4">Chief Executive Officer (CEO) & Cofounder</p>
+                    <p class="text-blue-200 leading-relaxed">
+                        Leading Sovrana's vision to create scalable AI automation and transform how businesses scale with intelligent systems.
+                    </p>
+                </div>
+                
+                <!-- Founder 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-chess-knight text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">James Richardson</h3>
+                    <p class="text-cyan-400 mb-4">Chief Strategy Officer (CSO) & Cofounder</p>
+                    <p class="text-blue-200 leading-relaxed">
+                        Driving strategic growth and market expansion initiatives to establish Sovrana as the leader in multi-agent AI automation.
+                    </p>
+                </div>
+                
+                <!-- Founder 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-handshake text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Omar Gazzaz</h3>
+                    <p class="text-cyan-400 mb-4">Chief Business Officer (CBO) & Cofounder</p>
+                    <p class="text-blue-200 leading-relaxed">
+                        Overseeing business operations and client relationships to ensure successful AI automation implementations across industries.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Company Mission -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold mb-6">Our Mission</h3>
+                    <p class="text-xl text-blue-200 leading-relaxed max-w-4xl mx-auto">
+                        "We believe that every business, regardless of size, deserves access to cutting-edge AI automation. 
+                        Our mission is to create scalable AI workflows by making enterprise-level technology accessible and 
+                        affordable for startups and small businesses."
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h4 class="text-xl font-semibold mb-2">Customer-First</h4>
+                        <p class="text-blue-200">Every solution is tailored to your specific business needs and goals.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h4 class="text-xl font-semibold mb-2">Innovation-Driven</h4>
+                        <p class="text-blue-200">We stay at the forefront of AI technology to deliver cutting-edge solutions.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h4 class="text-xl font-semibold mb-2">Partnership-Minded</h4>
+                        <p class="text-blue-200">We're not just vendors, we're your long-term automation partners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Advantages Section (Enhanced) -->
+    <section id="advantages" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-sovrana-dark mb-6">
+                    9 Key Advantages
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover why leading startups and SMBs choose Sovrana for their AI automation needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Custom-Built Multi-Agent Workflows</h3>
+                    <p class="text-gray-600">Tailored AI solutions designed specifically for your business processes and industry requirements.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">AI-Native Architecture</h3>
+                    <p class="text-gray-600">Built from the ground up with AI at its core, ensuring optimal performance and scalability.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">End-to-End Automation</h3>
+                    <p class="text-gray-600">Complete workflow automation from initiation to completion, reducing manual intervention.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Integration-First Design</h3>
+                    <p class="text-gray-600">Seamlessly connect with your existing tools and systems for unified operations.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chess-king text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Executive & Strategic Workflow Automation</h3>
+                    <p class="text-gray-600">Empower leadership with intelligent automation for strategic decision-making processes.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Enterprise-Grade Security</h3>
+                    <p class="text-gray-600">Bank-level security protocols ensure your data and processes remain protected.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Rapid Deployment</h3>
+                    <p class="text-gray-600">Get your AI workflows up and running in weeks, not months or years.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Dedicated Support Team</h3>
+                    <p class="text-gray-600">24/7 expert support ensures your AI systems run smoothly and efficiently.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="900">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-sovrana-dark mb-4">Measurable ROI</h3>
+                    <p class="text-gray-600">Track performance and measure results with detailed analytics and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-sovrana-dark to-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Transform Your Business?
+                </h2>
+                <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                    Start your AI automation journey with a free consultation. Let's discuss how custom AI agents can revolutionize your workflows.
+                </p>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="200">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">First Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Last Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="Smith">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email Address *</label>
+                        <input type="email" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="john@company.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Company Name</label>
+                        <input type="text" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="Your Company">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Team Size</label>
+                        <select class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                            <option value="">Select team size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-250">51-250 employees</option>
+                            <option value="250+">250+ employees</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">How can we help you? *</label>
+                        <textarea required rows="4" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="Tell us about your automation challenges and goals..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            Start Free Consultation
+                        </button>
+                        <p class="text-sm text-blue-200 mt-4">
+                            We'll respond within 24 hours with your custom AI automation strategy.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-sovrana-dark text-white py-16">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <img src="images/Color logo - no background.png" alt="Sovrana Logo" class="h-12 w-auto mb-6">
+                    <p class="text-blue-200 text-lg mb-6 max-w-md">
+                        Sovrana – Orchestrating the Future of Work with AI Agents
+                    </p>
+                    <p class="text-gray-400 mb-6">
+                        Democratizing access to sophisticated multi-agent AI systems for startups and SMBs. 
+                        Transform your business with custom AI automation, without the enterprise price tag.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Company Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="partners.html" class="text-gray-400 hover:text-white transition-colors duration-300">Partner Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="resources.html#press" class="text-gray-400 hover:text-white transition-colors duration-300">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition-colors duration-300">Documentation</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition-colors duration-300">Support Center</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="border-t border-gray-700 pt-12 mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-cyan-400">How long does implementation take?</h4>
+                        <p class="text-gray-400">Most custom AI implementations take 4-8 weeks from start to deployment, depending on complexity.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-cyan-400">Do you work with existing systems?</h4>
+                        <p class="text-gray-400">Yes, our AI agents integrate seamlessly with your current tools and workflows.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-cyan-400">What's included in support?</h4>
+                        <p class="text-gray-400">24/7 technical support, performance monitoring, and continuous optimization.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-cyan-400">Is there a money-back guarantee?</h4>
+                        <p class="text-gray-400">Yes, if you don't see measurable ROI within 6 months, we'll refund your investment.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="border-t border-gray-700 pt-8 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-cyan-400 text-2xl mb-2">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Email</h4>
+                        <p class="text-gray-400">hello@sovrana.ai</p>
+                    </div>
+                    <div>
+                        <div class="text-cyan-400 text-2xl mb-2">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Phone</h4>
+                        <p class="text-gray-400">+966 55 850 1748</p>
+                    </div>
+                    <div>
+                        <div class="text-cyan-400 text-2xl mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Locations</h4>
+                        <p class="text-gray-400">Jeddah, Saudi Arabia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    © 2025 Sovrana AI. All rights reserved.
+                </div>
+                <div class="flex space-x-6 text-sm">
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                    <a href="security.html" class="text-gray-400 hover:text-white transition-colors duration-300">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 26px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='22' viewBox='0 0 26 22' fill='none'%3E%3Cg clip-path='url(%23clip0_3442_102412)'%3E%3Cpath d='M12.8405 14.6775C12.8405 14.9897 13.0932 15.2424 13.4055 15.2424C13.7178 15.2424 13.9705 14.9897 13.9705 14.6775V2.98254C13.9705 1.88957 13.0809 1 11.9879 1C10.895 1 10.0054 1.88957 10.0054 2.98254V11.566V17.1068C10.0054 17.5773 9.62327 17.9594 9.1528 17.9594C8.68233 17.9594 8.30021 17.5773 8.30021 17.1068V8.04469C8.30021 6.95172 7.41063 6.06215 6.31767 6.06215C5.22471 6.06215 4.33513 6.95172 4.33513 8.04469V11.8855C4.33513 12.3559 3.953 12.7381 3.48254 12.7381C3.01207 12.7381 2.62994 12.3559 2.62994 11.8855V10.4936C2.62994 10.1813 2.37725 9.92861 2.06497 9.92861C1.7527 9.92861 1.5 10.1813 1.5 10.4936V11.8855C1.5 12.9784 2.38957 13.868 3.48254 13.868C4.5755 13.868 5.46508 12.9784 5.46508 11.8855V8.04469C5.46508 7.57422 5.8472 7.19209 6.31767 7.19209C6.78814 7.19209 7.17026 7.57422 7.17026 8.04469V17.1068C7.17026 18.1998 8.05984 19.0894 9.1528 19.0894C10.2458 19.0894 11.1353 18.1998 11.1353 17.1068V2.98254C11.1353 2.51207 11.5175 2.12994 11.9879 2.12994C12.4584 2.12994 12.8405 2.51207 12.8405 2.98254V14.6775Z' fill='%23F8F8F8'/%3E%3Cpath d='M23.3278 6.06215C22.2348 6.06215 21.3452 6.95172 21.3452 8.04469V15.6143C21.3452 16.0847 20.9631 16.4669 20.4926 16.4669C20.0222 16.4669 19.6401 16.0847 19.6401 15.6143V2.98254C19.6401 1.88957 18.7505 1 17.6575 1C16.5645 1 15.675 1.88957 15.675 2.98254V19.0175C15.675 19.4879 15.2928 19.8701 14.8224 19.8701C14.3519 19.8701 13.9698 19.4879 13.9698 19.0175V17.0329C13.9698 16.7206 13.7171 16.4679 13.4048 16.4679C13.0925 16.4679 12.8398 16.7206 12.8398 17.0329V19.0175C12.8398 20.1104 13.7294 21 14.8224 21C15.9153 21 16.8049 20.1104 16.8049 19.0175V2.98254C16.8049 2.51207 17.187 2.12994 17.6575 2.12994C18.128 2.12994 18.5101 2.51207 18.5101 2.98254V15.6143C18.5101 16.7072 19.3997 17.5968 20.4926 17.5968C21.5856 17.5968 22.4752 16.7072 22.4752 15.6143V8.04469C22.4752 7.57422 22.8573 7.19209 23.3278 7.19209C23.7982 7.19209 24.1804 7.57422 24.1804 8.04469V14.6775C24.1804 14.9897 24.4331 15.2424 24.7453 15.2424C25.0576 15.2424 25.3103 14.9897 25.3103 14.6775V8.04469C25.3103 6.95172 24.4207 6.06215 23.3278 6.06215Z' fill='%23F8F8F8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3442_102412'%3E%3Crect width='25' height='22' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+</body>
+</html>

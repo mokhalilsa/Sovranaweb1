@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Sovrana AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sovrana-blue': '#1e40af',
+                        'sovrana-dark': '#0f172a',
+                        'mountain-blue': '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center" style="padding: 20px 40px;">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="images/sovrana-logo-updated.png" alt="Sovrana Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-sovrana-blue transition-colors duration-300">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                <h1 class="text-4xl font-bold text-sovrana-dark mb-8">Support</h1>
+                
+                <div class="prose prose-lg max-w-none">
+                    <div class="bg-gradient-to-r from-sovrana-blue to-blue-600 text-white rounded-2xl p-8 mb-12">
+                        <h2 class="text-2xl font-bold mb-4 text-white">Get the help you need, when you need it</h2>
+                        <p class="text-blue-100 text-lg leading-relaxed">
+                            Comprehensive support resources, detailed documentation, and expert assistance to maximize your AI automation success.
+                        </p>
+                    </div>
+
+                    <!-- Documentation Section -->
+                    <section class="mb-12">
+                        <h2 class="text-2xl font-semibold text-sovrana-dark mt-8 mb-6">
+                            <i class="fas fa-book mr-3 text-sovrana-blue"></i>
+                            Documentation
+                        </h2>
+                        <p class="text-gray-800 mb-8 text-lg leading-relaxed">
+                            Explore detailed guides, API references, and product documentation to get the most from Sovrana.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-sovrana-blue mb-3">
+                                    <i class="fas fa-rocket mr-2"></i>
+                                    Getting Started
+                                </h3>
+                                <ul class="space-y-3 text-gray-800">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-sovrana-blue mr-2 mt-1"></i>
+                                        <span>Quick Start Guide</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-sovrana-blue mr-2 mt-1"></i>
+                                        <span>Platform Overview</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-sovrana-blue mr-2 mt-1"></i>
+                                        <span>Initial Setup & Configuration</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-sovrana-blue mr-2 mt-1"></i>
+                                        <span>Your First Workflow</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-50 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-green-600 mb-3">
+                                    <i class="fas fa-cogs mr-2"></i>
+                                    Platform Guides
+                                </h3>
+                                <ul class="space-y-3 text-gray-800">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-green-600 mr-2 mt-1"></i>
+                                        <span>Workflow Builder Manual</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-green-600 mr-2 mt-1"></i>
+                                        <span>Agent Configuration</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-green-600 mr-2 mt-1"></i>
+                                        <span>Integration Management</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-green-600 mr-2 mt-1"></i>
+                                        <span>Monitoring & Analytics</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-purple-600 mb-3">
+                                    <i class="fas fa-code mr-2"></i>
+                                    API Reference
+                                </h3>
+                                <ul class="space-y-3 text-gray-800">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-purple-600 mr-2 mt-1"></i>
+                                        <span>REST API Documentation</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-purple-600 mr-2 mt-1"></i>
+                                        <span>Webhook Configuration</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-purple-600 mr-2 mt-1"></i>
+                                        <span>SDK & Libraries</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-purple-600 mr-2 mt-1"></i>
+                                        <span>Authentication Guide</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-orange-50 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-orange-600 mb-3">
+                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    Security & Admin
+                                </h3>
+                                <ul class="space-y-3 text-gray-800">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-orange-600 mr-2 mt-1"></i>
+                                        <span>Security Best Practices</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-orange-600 mr-2 mt-1"></i>
+                                        <span>User Management</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-orange-600 mr-2 mt-1"></i>
+                                        <span>Compliance Guidelines</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-play text-orange-600 mr-2 mt-1"></i>
+                                        <span>Audit & Reporting</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+                            <h3 class="text-xl font-semibold text-sovrana-dark mb-4">
+                                <i class="fas fa-construction mr-2 text-yellow-500"></i>
+                                Documentation Coming Soon
+                            </h3>
+                            <p class="text-gray-800 mb-6">
+                                Our comprehensive documentation portal is currently under development. Beta access available for active clients.
+                            </p>
+                            <a href="beta-access-request.html" class="bg-sovrana-blue text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 inline-block">
+                                Request Beta Access
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Support Center Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-sovrana-dark mt-8 mb-6">
+                            <i class="fas fa-life-ring mr-3 text-sovrana-blue"></i>
+                            Support Center
+                        </h2>
+                        <p class="text-gray-800 mb-8 text-lg leading-relaxed">
+                            Need help with an active project or have questions? Our support team is here to assist you.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
+                                <div class="text-3xl mb-4">🚀</div>
+                                <h3 class="text-lg font-semibold text-green-600 mb-3">Priority Support</h3>
+                                <p class="text-gray-800 text-sm mb-4">For Implementation Package and Custom Solution clients</p>
+                                <div class="text-2xl font-bold text-green-600 mb-2">< 4 hours</div>
+                                <p class="text-gray-600 text-sm">Response time</p>
+                            </div>
+
+                            <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl text-center">
+                                <div class="text-3xl mb-4">📞</div>
+                                <h3 class="text-lg font-semibold text-sovrana-blue mb-3">Standard Support</h3>
+                                <p class="text-gray-800 text-sm mb-4">Email and ticket-based assistance</p>
+                                <div class="text-2xl font-bold text-sovrana-blue mb-2">< 24 hours</div>
+                                <p class="text-gray-600 text-sm">Response time</p>
+                            </div>
+
+                            <div class="bg-purple-50 border border-purple-200 p-6 rounded-xl text-center">
+                                <div class="text-3xl mb-4">💬</div>
+                                <h3 class="text-lg font-semibold text-purple-600 mb-3">Community</h3>
+                                <p class="text-gray-800 text-sm mb-4">Community forums and knowledge sharing</p>
+                                <div class="text-2xl font-bold text-purple-600 mb-2">24/7</div>
+                                <p class="text-gray-600 text-sm">Available</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-sovrana-dark mb-4">
+                                    <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                                    Email Support
+                                </h3>
+                                <p class="text-gray-800 mb-4">
+                                    Send us your questions, bug reports, or feature requests via email.
+                                </p>
+                                <a href="mailto:support@sovran.ai" class="text-sovrana-blue font-semibold hover:text-blue-700 transition-colors duration-300">
+                                    support@sovran.ai
+                                </a>
+                                <div class="mt-4 text-sm text-gray-600">
+                                    <p><strong>Include:</strong> Project ID, error details, screenshots if applicable</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                                <h3 class="text-lg font-semibold text-sovrana-dark mb-4">
+                                    <i class="fas fa-ticket-alt mr-2 text-green-500"></i>
+                                    Support Tickets
+                                </h3>
+                                <p class="text-gray-800 mb-4">
+                                    Submit detailed support requests through our ticketing system for tracking and follow-up.
+                                </p>
+                                <a href="support-ticket.html" class="bg-sovrana-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 inline-block">
+                                    Create Ticket
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-50 border border-red-200 p-6 rounded-xl mb-8">
+                            <h3 class="text-lg font-semibold text-red-600 mb-4">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Emergency Support
+                            </h3>
+                            <p class="text-gray-800 mb-4">
+                                For critical production issues affecting business operations outside normal business hours.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-2"><strong>Available for:</strong></p>
+                                    <ul class="text-sm text-gray-800 space-y-1">
+                                        <li>• Implementation Package clients</li>
+                                        <li>• Custom Solution clients</li>
+                                        <li>• Critical system failures</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-2"><strong>Response time:</strong></p>
+                                    <p class="text-lg font-semibold text-red-600">< 2 hours</p>
+                                    <a href="mailto:emergency@sovran.ai" class="text-red-600 font-semibold hover:text-red-700 transition-colors duration-300">
+                                        emergency@sovran.ai
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-sovrana-dark text-white p-8 rounded-2xl">
+                            <h3 class="text-xl font-semibold mb-4">
+                                <i class="fas fa-users mr-2 text-blue-400"></i>
+                                Dedicated Account Management
+                            </h3>
+                            <p class="text-blue-200 mb-6">
+                                Custom Solution clients receive dedicated account managers for personalized support and strategic guidance.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-400 mb-2">1:1</div>
+                                    <p class="text-blue-200 text-sm">Dedicated manager</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-400 mb-2">Weekly</div>
+                                    <p class="text-blue-200 text-sm">Check-in calls</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-400 mb-2">Direct</div>
+                                    <p class="text-blue-200 text-sm">Phone & email access</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 bg-blue-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-semibold text-sovrana-blue mb-4">
+                                <i class="fas fa-question-circle mr-2"></i>
+                                Frequently Asked Questions
+                            </h3>
+                            <div class="space-y-4">
+                                <details class="bg-white p-4 rounded-lg">
+                                    <summary class="font-medium text-sovrana-dark cursor-pointer">How do I get started with Sovrana?</summary>
+                                    <p class="text-gray-800 mt-2">Begin with our free Startup Assessment to understand your automation potential, then choose the package that fits your needs.</p>
+                                </details>
+                                <details class="bg-white p-4 rounded-lg">
+                                    <summary class="font-medium text-sovrana-dark cursor-pointer">What's included in support packages?</summary>
+                                    <p class="text-gray-800 mt-2">Support varies by package: Startup Assessment includes email support, Implementation Package includes priority support, and Custom Solutions include dedicated account management.</p>
+                                </details>
+                                <details class="bg-white p-4 rounded-lg">
+                                    <summary class="font-medium text-sovrana-dark cursor-pointer">How do I escalate an urgent issue?</summary>
+                                    <p class="text-gray-800 mt-2">Use emergency@sovran.ai for critical production issues. Include your project ID and detailed description of the problem.</p>
+                                </details>
+                                <details class="bg-white p-4 rounded-lg">
+                                    <summary class="font-medium text-sovrana-dark cursor-pointer">Can I upgrade my support level?</summary>
+                                    <p class="text-gray-800 mt-2">Yes, contact your account manager or support@sovran.ai to discuss upgrading to a higher support tier or package.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sovrana-dark text-white py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <p>&copy; 2025 Sovrana. All rights reserved.</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="privacy-policy.html" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+                    <a href="security.html" class="text-gray-300 hover:text-white transition-colors duration-300">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 26px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='22' viewBox='0 0 26 22' fill='none'%3E%3Cg clip-path='url(%23clip0_3442_102412)'%3E%3Cpath d='M12.8405 14.6775C12.8405 14.9897 13.0932 15.2424 13.4055 15.2424C13.7178 15.2424 13.9705 14.9897 13.9705 14.6775V2.98254C13.9705 1.88957 13.0809 1 11.9879 1C10.895 1 10.0054 1.88957 10.0054 2.98254V11.566V17.1068C10.0054 17.5773 9.62327 17.9594 9.1528 17.9594C8.68233 17.9594 8.30021 17.5773 8.30021 17.1068V8.04469C8.30021 6.95172 7.41063 6.06215 6.31767 6.06215C5.22471 6.06215 4.33513 6.95172 4.33513 8.04469V11.8855C4.33513 12.3559 3.953 12.7381 3.48254 12.7381C3.01207 12.7381 2.62994 12.3559 2.62994 11.8855V10.4936C2.62994 10.1813 2.37725 9.92861 2.06497 9.92861C1.7527 9.92861 1.5 10.1813 1.5 10.4936V11.8855C1.5 12.9784 2.38957 13.868 3.48254 13.868C4.5755 13.868 5.46508 12.9784 5.46508 11.8855V8.04469C5.46508 7.57422 5.8472 7.19209 6.31767 7.19209C6.78814 7.19209 7.17026 7.57422 7.17026 8.04469V17.1068C7.17026 18.1998 8.05984 19.0894 9.1528 19.0894C10.2458 19.0894 11.1353 18.1998 11.1353 17.1068V2.98254C11.1353 2.51207 11.5175 2.12994 11.9879 2.12994C12.4584 2.12994 12.8405 2.51207 12.8405 2.98254V14.6775Z' fill='%23F8F8F8'/%3E%3Cpath d='M23.3278 6.06215C22.2348 6.06215 21.3452 6.95172 21.3452 8.04469V15.6143C21.3452 16.0847 20.9631 16.4669 20.4926 16.4669C20.0222 16.4669 19.6401 16.0847 19.6401 15.6143V2.98254C19.6401 1.88957 18.7505 1 17.6575 1C16.5645 1 15.675 1.88957 15.675 2.98254V19.0175C15.675 19.4879 15.2928 19.8701 14.8224 19.8701C14.3519 19.8701 13.9698 19.4879 13.9698 19.0175V17.0329C13.9698 16.7206 13.7171 16.4679 13.4048 16.4679C13.0925 16.4679 12.8398 16.7206 12.8398 17.0329V19.0175C12.8398 20.1104 13.7294 21 14.8224 21C15.9153 21 16.8049 20.1104 16.8049 19.0175V2.98254C16.8049 2.51207 17.187 2.12994 17.6575 2.12994C18.128 2.12994 18.5101 2.51207 18.5101 2.98254V15.6143C18.5101 16.7072 19.3997 17.5968 20.4926 17.5968C21.5856 17.5968 22.4752 16.7072 22.4752 15.6143V8.04469C22.4752 7.57422 22.8573 7.19209 23.3278 7.19209C23.7982 7.19209 24.1804 7.57422 24.1804 8.04469V14.6775C24.1804 14.9897 24.4331 15.2424 24.7453 15.2424C25.0576 15.2424 25.3103 14.9897 25.3103 14.6775V8.04469C25.3103 6.95172 24.4207 6.06215 23.3278 6.06215Z' fill='%23F8F8F8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3442_102412'%3E%3Crect width='25' height='22' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+</body>
+</html>
